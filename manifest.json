@@ -1,0 +1,20 @@
+{
+  "name": "Tilda AI Assistant",
+  "description": "AI-помощник для разработчиков Tilda: чат, подсказки, рецепты, анализ дизайна.",
+  "version": "1.0.0",
+  "manifest_version": 3,
+  "permissions": ["activeTab", "scripting", "storage"],
+  "content_scripts": [
+    {
+      "matches": ["https://tilda.cc/*"],
+      "js": ["content.js"],
+      "css": ["floating.css"]
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "icons": {
+    "128": "icons/ai-ball.png"
+  }
+}
