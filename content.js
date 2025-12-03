@@ -1,5 +1,9 @@
 (function() {
-  if (!location.href.includes("tilda.cc")) return;
+  const isTildaEditor = /\/page\/.*\/edit/.test(location.pathname) || /\/page\/.*edit/.test(location.href);
+  if (!isTildaEditor) return;
+
+  if (document.getElementById("tilda-ai-ball")) return;
+
 
   // === 1. Создаём шар ===
   const ball = document.createElement("div");
