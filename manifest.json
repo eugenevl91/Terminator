@@ -6,7 +6,10 @@
   "permissions": ["activeTab", "scripting", "storage"],
   "content_scripts": [
     {
-      "matches": ["https://tilda.cc/*"],
+      "matches": [
+        "https://tilda.cc/*/page/*/edit*",
+        "https://tilda.cc/page/*/edit*"
+      ],
       "js": ["content.js"],
       "css": ["floating.css"]
     }
